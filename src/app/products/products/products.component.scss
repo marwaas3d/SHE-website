@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+:host{
+    background-color: #c8a681;
+    display: block;
+    min-height: 100vh;
+}
+
+.navbar{
+    background-color: #271e0b !important;
+    a{
+    color: #c8a681 ;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px;
+    }
+}
+
+.card{
+    background-color: #271e0b66;
+    img{
+        transition: all .6s;
+        &:hover{
+        cursor: pointer;
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+    }
+    }
+
+}
+.btnLogOut{
+    background-color: #c8a681;
+    color: #271e0b;
+    cursor: pointer;
+    border: unset;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius:7px;
+  }
+button:disabled {
+  pointer-events: auto;
+  cursor: not-allowed;
+}
+
+
+

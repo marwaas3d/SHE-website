@@ -1,0 +1,42 @@
+    <form class="p-5" [formGroup]="logInForm" (ngSubmit)="loggin()">
+        <div class='form-item mb-4'>
+            <label for="email" class="mb-2 fw-bold fs-5 text-white">Email</label>
+            <input placeholder="test@gmail.com" class="form-control" type="email" name="email" id="email" formControlName="email">
+        </div>
+        <div class='form-item mb-5'>
+            <label for="password" class="mb-2 fw-bold fs-5 text-white">password</label>
+            <input placeholder="123456" class="form-control" type="password" name="password" id="password" formControlName="password">
+        </div>
+
+
+    <div class='login-btn d-flex justify-content-center align-items-center '>
+      <button  class='main-btn' type='submit'[disabled] = 'logInForm.invalid' >
+        Log In 
+      </button>
+    </div>
+
+
+    </form>
+
+
+
+
+    <div class='error-containter'>
+        
+    <div *ngIf="isLoggedin" class="error p-4 rounded text-white fw-bold">
+        <p class="mb-0">Invalid email and password</p>
+    </div>
+
+
+    <div class='error px-4 py-3 rounded text-white fw-bold' *ngIf="logInForm.get('email')?.errors  && logInForm.get('email')?.touched">
+        <p class="mb-0" *ngIf="logInForm.get('email')?.getError('email')">Invalid Email</p>
+        <p class="mb-0" *ngIf="logInForm.get('email')?.getError('required')">Email Is Required</p>
+    </div>
+
+
+    <div class='error px-4 py-3 rounded text-white fw-bold' *ngIf="logInForm.get('password')?.errors  && logInForm.get('password')?.touched ">
+        <p class="mb-0" *ngIf="logInForm.get('password')?.getError('required')">Password is required</p>
+    </div>
+
+
+</div>

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+:host{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://marwaas3d.github.io/SHE-website/assets/login.jpg);
+    background-color: #d9cdc1;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 100vh;
+}
+$main-color:#493c36;
+@media(max-width:687px){
+    :host{
+        background-size: cover;
+    }
+}
+
+form{
+    background-color: #34343480;
+    width: 40%;
+    height: 50%;
+    transition: all .6s;
+    &:hover{
+        border-top-left-radius: 120px;
+        border-bottom-right-radius: 120px;
+    }
+
+    label{
+        font-family: "Josefin Sans", sans-serif;
+    }
+    input:focus{
+        border: 3px $main-color;
+        box-shadow: none;
+    }
+}
+
+@media(max-width:992px){
+    form{
+        width: 80%;
+    }
+}
+
+::placeholder{
+    color: $main-color;
+}
+
+
+.error{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: $main-color;
+}
+
+
+
+
+

@@ -1,0 +1,38 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/products">
+      <img src="./assets/sheIcon.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-center">
+      She
+    </a>
+
+    <button class="btn btnLogOut fw-bold" (click)="logOUT()">log Out</button>
+  </div>
+</nav>
+
+
+<div class="container py-4">
+<div class="row g-4">
+    
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let product of products">
+    <div class="card p-3 rounded text-white">
+        <div class="w-100 overflow-hidden">
+            <img [src]="product.imgUrl" class="card-img-top w-100 object-fit-cover" alt="product" height="400">
+        </div>
+      <div class="card-body px-0">
+        <h4 class="card-title">{{ product.name }}</h4>
+        <h5>{{ product.price | currency:'EGP ' }}</h5>
+        <p class="fw-bold" [style.color]="product.inStock === 'Out Of Stock' ? '#271e0b66' : ''">
+        {{ product.inStock }}
+        </p>
+
+        <button href="#" class="btn main-btn buyBtn w-100" [disabled]="product.inStock === 'Out Of Stock'">Buy Now</button>
+      </div>
+    </div> 
+  </div>
+
+</div>
+
+</div>
+
+
+

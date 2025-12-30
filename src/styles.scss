@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+$main-color:#493c36;
+
+.main-btn{
+    background-color: $main-color;
+    color: #fff;
+    cursor: pointer;
+    border: unset;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius:7px;
+    &:disabled 
+    {
+    background-color: #73625a;
+    color: #fff;
+    cursor: not-allowed;
+  }
+
+}
+
+::selection{
+  background-color: $main-color;
+  color: #fff;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 12px;
+  background-color: #493c36;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
