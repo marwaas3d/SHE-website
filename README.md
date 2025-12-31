@@ -1,5 +1,6 @@
 # SHE-website
-demo:  [shewebsite2.netlify.app](https://shewebsite2.netlify.app/login)
+demo:  https://shewebsite2.netlify.app
+
 
 
 This project is a solution for the Angular task assigned.  
